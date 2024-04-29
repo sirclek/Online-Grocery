@@ -10,9 +10,10 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frozen Food Items</title>
     <link rel="stylesheet" href="css/categorystyle.css">
-    <link rel="stylesheet" href="css/headerstyle.css">
-    <link rel="stylesheet" href="css/productstyle.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/cartstyle.css">
+    <link rel="stylesheet" href="css/product.css">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         * {
@@ -76,7 +77,7 @@ session_start();
         <i class='bx bx-x' id="close-cart"></i>
     </div>
 
-    <script src="script.js"></script>
+    <script src="indexscript.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             showProducts('all');

@@ -10,7 +10,7 @@ CREATE TABLE `products` (
 `unit_price` float(8,2) DEFAULT NULL,
 `unit_quantity` varchar(15) DEFAULT NULL,
 `in_stock` int(10) unsigned DEFAULT NULL,
- `image_id` varchar(20) DEFAULT NULL,
+`image_id` varchar(20) DEFAULT NULL,
 `category` varchar(20) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 -- ----------------------------

@@ -66,9 +66,12 @@
         const CART_KEY = 'CART_KEY';
 
         async function clearCart() {
-            localStorage.setItem(CART_KEY, "");
-            document.getElementById("cart-content").innerHTML = "";
-            document.getElementById("total-price").innerHTML = "$0";
+            const cartString = localStorage.getItem(CART_KEY);
+            const cart = JSON.parse(cartString);
+            for (const productId in cart) {
+                delete cart[productId];
+            }
+            localStorage.setItem(CART_KEY, JSON.stringify(cart));
             updateCart();
         }
 
@@ -145,10 +148,9 @@
             const cartString = localStorage.getItem(CART_KEY);
             const cart = JSON.parse(cartString);
             var totalPrice = 0;
-            document.getElementById("total-price").innerHTML = "0";
+            document.getElementById("total-price").innerHTML = "$0";
 
             for (const productId in cart) {
-                console.log(productId);
                 const quantity = cart[productId];
                 const url = `product.php?productId=${productId}`;
 
